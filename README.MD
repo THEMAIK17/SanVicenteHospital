@@ -145,11 +145,22 @@ Reports and statistics.
 
 User and role management.
 
-## Author
 
-(maikold774@gmail.com)
 
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+## Name
+
+ARMANDO MAIKOL DURAN SALAS
+ 
+## Clan
+CAIMAN
+
+## Email
+maikold774@gmail.com
+
+## Document Type
+
+1002184305
