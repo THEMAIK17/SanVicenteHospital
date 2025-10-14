@@ -13,5 +13,8 @@ namespace SanVicenteHospital.Database
 
         private List<Doctor> _Doctors = new List<Doctor>();
         public List<Doctor> Doctors => _Doctors;
+
+        private List<Appointment> _Appointments = new List<Appointment>();
+        public List<Appointment> Appointments => _Appointments;
     }
 }

@@ -28,7 +28,9 @@ public class Doctor : Person
 
     public override string ToString()
     {
-        return $@"Id: {Id}
+        return $@"
+        ----------------------------------------
+                    Id: {Id}
                     Name: {Name}
                     LastName: {LastName}
                     DocumentType: {DocumentType}
@@ -36,7 +38,10 @@ public class Doctor : Person
                     Email: {Email}
                     Phone: {Phone}
                     Address: {Address}
-                    Specialty: {Specialty}";
+                    Specialty: {Specialty}
+        ----------------------------------------            
+        ";
+                    
     }
 }
 

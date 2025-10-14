@@ -74,7 +74,9 @@ public abstract class Person
     // Returns a string representation of the person with all main details
     public virtual string ToString()
     {
-        return  $@"Id: {Id}
+        return  $@"
+        ----------------------------------------
+        Id: {Id}
             Name: { Name}
             Lastname: { LastName}
             DocumentType: { DocumentType}
@@ -82,6 +84,8 @@ public abstract class Person
             Email: { Email}
             Age: { Age}
             Address: { Address} 
-            Phone: {Phone}";
+            Phone: {Phone}
+        ----------------------------------------
+        ";
     }
 }
