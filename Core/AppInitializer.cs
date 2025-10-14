@@ -18,16 +18,20 @@ public class AppInitializer
     {
         var dbContext = new DatabaseContext();
         var patientRepository = new PatientRepository(dbContext);
+        var doctorRepository = new DoctorRepository(dbContext);
+
         var patientService = new PatientService(patientRepository);
+        var doctorService = new DoctorService(doctorRepository);
 
         var showMenuPatient = new ShowMenuPatient(patientService);
+        var showMenuDoctor = new ShowMenuDoctor(doctorService);
 
-        DataSeeder.SeedAllData(patientRepository);
+        DataSeeder.SeedAllData(patientRepository, doctorRepository);
 
-        RunMainMenu(showMenuPatient);
+        RunMainMenu(showMenuPatient, showMenuDoctor);
     }
 
-    private void RunMainMenu(ShowMenuPatient showMenuPatient)
+    private void RunMainMenu(ShowMenuPatient showMenuPatient, ShowMenuDoctor showMenuDoctor)
     {
         bool running = true;
 
@@ -36,6 +40,7 @@ public class AppInitializer
             Console.Clear();
             Console.WriteLine("\n--- Menú Principal ---");
             Console.WriteLine("1. Trámites Pacientes");
+            Console.WriteLine("2. Trámites Doctores");
             Console.WriteLine("0. Salir");
             Console.Write("Seleccione una opción: ");
             string option = Console.ReadLine() ?? "";
@@ -44,6 +49,9 @@ public class AppInitializer
             {
                 case "1":
                     showMenuPatient.ShowMenuPatient1();
+                    break;
+                case "2":
+                    showMenuDoctor.ShowMenuDoctor1();
                     break;
                 case "0":
                     running = false;
