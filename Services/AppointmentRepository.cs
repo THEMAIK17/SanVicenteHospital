@@ -210,12 +210,12 @@ namespace SanVicenteHospital.Services
             {
                 using (var smtpClient = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtpClient.Credentials = new NetworkCredential("tu_correo@gmail.com", "tu_contraseña_o_token");
+                    smtpClient.Credentials = new NetworkCredential("maikold774@gmail.com", "yvys awad eysq newz");
                     smtpClient.EnableSsl = true;
 
                     var mailMessage = new MailMessage
                     {
-                        From = new MailAddress("tu_correo@gmail.com", "San Vicente Hospital"),
+                        From = new MailAddress("maikold774@gmail.com", "San Vicente Hospital"),
                         Subject = "Appointment Confirmation",
                         Body = $@"
                     
